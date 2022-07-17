@@ -1,0 +1,153 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.parent-div {
+    background-color: rgb(104, 151, 104);
+    border: 2px solid gray;
+
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border: 2px solid white;
+    border-radius: 400px;
+
+}
+
+.field {
+    width: 50%;
+    height: 50%;
+    display: flex;
+
+}
+
+.pitch {
+    background: #a29b9b5f;
+    border: 1px solid gray;
+    width: 100%;
+    transform: skew(-10deg);
+    height: 50%;
+}
+
+.first {
+    border-right: 1px solid white;
+    width: 15%;
+}
+
+.middle {
+    border-right: 1px solid white;
+    width: 70%;
+}
+
+.last {
+    border-right: 1px solid white;
+    width: 15%;
+}
+
+.stump {
+    height: 400px;
+    width: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    transform: skew(10deg, -70deg);
+    position: relative;
+    left: 30%;
+    top: -2%;
+    z-index: 5;
+
+
+    /* border: 1px solid gray; */
+}
+
+.stump2 {
+    height: 400px;
+    width: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    transform: skew(-5deg, -75deg);
+    position: relative;
+    right: 1.5%;
+    top: -2%;
+    z-index: 5;
+
+
+    /* border: 1px solid gray; */
+}
+
+.single-stump {
+    border: 1px solid gray;
+    width: 33%;
+    height: 33%;
+    background-color: yellow;
+    border-bottom: none;
+    border-radius: 20px;
+}
+
+.single-stump2 {
+    border: 1px solid gray;
+    width: 33%;
+    height: 33%;
+    background-color: yellow;
+    border-bottom: none;
+    border-radius: 20px;
+}
+
+.bat {
+    position: relative;
+    left: 25%;
+    top: -35%;
+    z-index: 2;
+    transform: rotate(-32deg) skew(-10deg);
+    animation: chokka 5s infinite ease-in;
+    animation-play-state: running;
+}
+
+.bat img {
+    width: 40%;
+    height: 10%;
+}
+
+.ball {
+    background-color: red;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    position: relative;
+    top: -42%;
+    animation: ball-anim 5s infinite linear;
+}
+
+@keyframes ball-anim {
+    20% {
+        transform: translate(0);
+    }
+
+    40% {
+        transform: translate(-535px, 140px);
+    }
+
+    80% {
+        transform: translate(600px, -500px);
+    }
+}
+
+@keyframes chokka {
+
+    20% {
+        /* display: none; */
+        transform: rotate(-20deg);
+        transform-origin: top;
+    }
+
+    40% {
+        transform: rotate(-75deg);
+        transform-origin: top;
+
+    }
+}
